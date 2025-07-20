@@ -15,6 +15,7 @@ mongoose.connect('mongodb+srv://pankajchauhanimu:VtG8Ok3AObMNuRHE@cluster0.mzhal
     useUnifiedTopology: true,
     tls: true,
     tlsInsecure: true,
+    ssl: true,
 },
     console.log('Connected to MongoDB')
 );
