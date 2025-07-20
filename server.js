@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const port = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
 mongoose.connect('mongodb+srv://pankajchauhanimu:VtG8Ok3AObMNuRHE@cluster0.mzhaltq.mongodb.net/',{ dBName: "Test" } ,{
     useNewUrlParser: true,
@@ -36,6 +36,6 @@ app.post('/api/login', async (req, res) => {
     res.status(200).json({ message: 'Login successful', username: user.username });
 });
 
-app.listen(port, () => {
+app.listen(PORT, () => {
     console.log('Server is running on port 5000');
 });
