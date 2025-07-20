@@ -20,6 +20,9 @@ mongoose.connect('mongodb+srv://pankajchauhanimu:VtG8Ok3AObMNuRHE@cluster0.mzhal
     console.log('Connected to MongoDB')
 );
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the Love App API! 💖');
+});
 
 app.post('/api/register', async (req, res) => {
     const { username, password } = req.body;
